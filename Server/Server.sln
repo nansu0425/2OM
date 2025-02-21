@@ -1,9 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game", "Game\Game.vcxproj", "{C8516AE7-E8B0-48B0-AD3F-E232B17A03B4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Game", "Game", "{38811301-5939-4F80-9605-2A5D1095557E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Core", "Game\Core\Core.vcxproj", "{172EE549-DEF1-4C50-9F9C-266DBACF5320}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Content", "Game\Content\Content.vcxproj", "{E2D412D5-D239-4D17-AABF-A5EE6D76B846}"
+	ProjectSection(ProjectDependencies) = postProject
+		{172EE549-DEF1-4C50-9F9C-266DBACF5320} = {172EE549-DEF1-4C50-9F9C-266DBACF5320}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "World", "Game\World\World.vcxproj", "{A8F7F21A-60E5-4E93-B743-14F8744C0A4F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{172EE549-DEF1-4C50-9F9C-266DBACF5320} = {172EE549-DEF1-4C50-9F9C-266DBACF5320}
+		{E2D412D5-D239-4D17-AABF-A5EE6D76B846} = {E2D412D5-D239-4D17-AABF-A5EE6D76B846}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +26,37 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C8516AE7-E8B0-48B0-AD3F-E232B17A03B4}.Debug|x64.ActiveCfg = Debug|x64
-		{C8516AE7-E8B0-48B0-AD3F-E232B17A03B4}.Debug|x64.Build.0 = Debug|x64
-		{C8516AE7-E8B0-48B0-AD3F-E232B17A03B4}.Debug|x86.ActiveCfg = Debug|Win32
-		{C8516AE7-E8B0-48B0-AD3F-E232B17A03B4}.Debug|x86.Build.0 = Debug|Win32
-		{C8516AE7-E8B0-48B0-AD3F-E232B17A03B4}.Release|x64.ActiveCfg = Release|x64
-		{C8516AE7-E8B0-48B0-AD3F-E232B17A03B4}.Release|x64.Build.0 = Release|x64
-		{C8516AE7-E8B0-48B0-AD3F-E232B17A03B4}.Release|x86.ActiveCfg = Release|Win32
-		{C8516AE7-E8B0-48B0-AD3F-E232B17A03B4}.Release|x86.Build.0 = Release|Win32
+		{172EE549-DEF1-4C50-9F9C-266DBACF5320}.Debug|x64.ActiveCfg = Debug|x64
+		{172EE549-DEF1-4C50-9F9C-266DBACF5320}.Debug|x64.Build.0 = Debug|x64
+		{172EE549-DEF1-4C50-9F9C-266DBACF5320}.Debug|x86.ActiveCfg = Debug|Win32
+		{172EE549-DEF1-4C50-9F9C-266DBACF5320}.Debug|x86.Build.0 = Debug|Win32
+		{172EE549-DEF1-4C50-9F9C-266DBACF5320}.Release|x64.ActiveCfg = Release|x64
+		{172EE549-DEF1-4C50-9F9C-266DBACF5320}.Release|x64.Build.0 = Release|x64
+		{172EE549-DEF1-4C50-9F9C-266DBACF5320}.Release|x86.ActiveCfg = Release|Win32
+		{172EE549-DEF1-4C50-9F9C-266DBACF5320}.Release|x86.Build.0 = Release|Win32
+		{E2D412D5-D239-4D17-AABF-A5EE6D76B846}.Debug|x64.ActiveCfg = Debug|x64
+		{E2D412D5-D239-4D17-AABF-A5EE6D76B846}.Debug|x64.Build.0 = Debug|x64
+		{E2D412D5-D239-4D17-AABF-A5EE6D76B846}.Debug|x86.ActiveCfg = Debug|Win32
+		{E2D412D5-D239-4D17-AABF-A5EE6D76B846}.Debug|x86.Build.0 = Debug|Win32
+		{E2D412D5-D239-4D17-AABF-A5EE6D76B846}.Release|x64.ActiveCfg = Release|x64
+		{E2D412D5-D239-4D17-AABF-A5EE6D76B846}.Release|x64.Build.0 = Release|x64
+		{E2D412D5-D239-4D17-AABF-A5EE6D76B846}.Release|x86.ActiveCfg = Release|Win32
+		{E2D412D5-D239-4D17-AABF-A5EE6D76B846}.Release|x86.Build.0 = Release|Win32
+		{A8F7F21A-60E5-4E93-B743-14F8744C0A4F}.Debug|x64.ActiveCfg = Debug|x64
+		{A8F7F21A-60E5-4E93-B743-14F8744C0A4F}.Debug|x64.Build.0 = Debug|x64
+		{A8F7F21A-60E5-4E93-B743-14F8744C0A4F}.Debug|x86.ActiveCfg = Debug|Win32
+		{A8F7F21A-60E5-4E93-B743-14F8744C0A4F}.Debug|x86.Build.0 = Debug|Win32
+		{A8F7F21A-60E5-4E93-B743-14F8744C0A4F}.Release|x64.ActiveCfg = Release|x64
+		{A8F7F21A-60E5-4E93-B743-14F8744C0A4F}.Release|x64.Build.0 = Release|x64
+		{A8F7F21A-60E5-4E93-B743-14F8744C0A4F}.Release|x86.ActiveCfg = Release|Win32
+		{A8F7F21A-60E5-4E93-B743-14F8744C0A4F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{172EE549-DEF1-4C50-9F9C-266DBACF5320} = {38811301-5939-4F80-9605-2A5D1095557E}
+		{E2D412D5-D239-4D17-AABF-A5EE6D76B846} = {38811301-5939-4F80-9605-2A5D1095557E}
+		{A8F7F21A-60E5-4E93-B743-14F8744C0A4F} = {38811301-5939-4F80-9605-2A5D1095557E}
 	EndGlobalSection
 EndGlobal
