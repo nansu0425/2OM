@@ -19,16 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main\Main.cpp" />
-    <ClCompile Include="PrecompiledHeaders\Pch.cpp">
+    <ClCompile Include="CommonPch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PrecompiledHeaders\Pch.h" />
+    <ClInclude Include="CommonPch.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -83,25 +83,25 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir);$(SolutionDir)Game\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Game\;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)Binary\$(Configuration)\</OutDir>
     <IntDir>Object\$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)Binary\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(ProjectDir);$(SolutionDir)Game\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Game\;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)Binary\$(Configuration)\</OutDir>
     <IntDir>Object\$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)Binary\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir);$(SolutionDir)Game\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Game\;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)Binary\$(Configuration)\</OutDir>
     <IntDir>Object\$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)Binary\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(ProjectDir);$(SolutionDir)Game\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Game\;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)Binary\$(Configuration)\</OutDir>
     <IntDir>Object\$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)Binary\$(Configuration)\;$(LibraryPath)</LibraryPath>
@@ -114,7 +114,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>PrecompiledHeaders/Pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>World/CommonPch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,7 +132,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>PrecompiledHeaders/Pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>World/CommonPch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,7 +150,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>PrecompiledHeaders/Pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>World/CommonPch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -168,7 +168,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>PrecompiledHeaders/Pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>World/CommonPch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

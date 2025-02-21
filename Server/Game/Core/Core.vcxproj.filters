@@ -4,18 +4,39 @@
     <Filter Include="Common">
       <UniqueIdentifier>{44ac4279-cbae-4330-a18d-daa38f9c7134}</UniqueIdentifier>
     </Filter>
-    <Filter Include="PrecompiledHeaders">
-      <UniqueIdentifier>{3ba684ab-4a7b-4758-8198-8db0a1c8e31d}</UniqueIdentifier>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{6229cb51-5721-49eb-8a94-256e78887d31}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PrecompiledHeaders\Pch.cpp">
-      <Filter>PrecompiledHeaders</Filter>
+    <ClCompile Include="CommonGlobal.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonPch.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadLocalGuard.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadManager.cpp">
+      <Filter>Thread</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PrecompiledHeaders\Pch.h">
-      <Filter>PrecompiledHeaders</Filter>
+    <ClInclude Include="CommonGlobal.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonMacro.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonPch.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadLocalGuard.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadManager.h">
+      <Filter>Thread</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

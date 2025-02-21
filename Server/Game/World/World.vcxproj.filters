@@ -4,21 +4,21 @@
     <Filter Include="Main">
       <UniqueIdentifier>{e7aecbd0-2929-4f21-9c30-541941062be9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="PrecompiledHeaders">
+    <Filter Include="Common">
       <UniqueIdentifier>{111ba6b3-224b-4774-b7e4-5d2eb927b8ca}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main\Main.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="PrecompiledHeaders\Pch.cpp">
-      <Filter>PrecompiledHeaders</Filter>
+    <ClCompile Include="CommonPch.cpp">
+      <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PrecompiledHeaders\Pch.h">
-      <Filter>PrecompiledHeaders</Filter>
+    <ClInclude Include="CommonPch.h">
+      <Filter>Common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
