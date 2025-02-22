@@ -1,16 +1,16 @@
 ﻿#pragma once
 
-namespace Game::Core
+namespace Server::CppCore::Thread
 {
-    /*------------------------*
-     *    ThreadLocalGuard    *
-     *------------------------*/
+    /*----------------*
+     *    TlsGuard    *
+     *----------------*/
 
-    class ThreadLocalGuard
+    class TlsGuard
     {
     public:
-        ThreadLocalGuard();
-        ~ThreadLocalGuard();
+        TlsGuard();
+        ~TlsGuard();
 
         static uint32_t GetThreadId();
 

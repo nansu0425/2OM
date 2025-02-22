@@ -1,21 +1,21 @@
-﻿#include "Core/CommonPch.h"
+﻿#include "Server.CppCore/Global.Pch.h"
 
-namespace Game::Core
+namespace Server::CppCore::Thread
 {
-    ThreadLocalGuard::ThreadLocalGuard()
+    TlsGuard::TlsGuard()
     {
         AssignThreadId();
     }
 
-    ThreadLocalGuard::~ThreadLocalGuard()
+    TlsGuard::~TlsGuard()
     {}
 
-    uint32_t ThreadLocalGuard::GetThreadId()
+    uint32_t TlsGuard::GetThreadId()
     {
         return t_threadId;
     }
 
-    void ThreadLocalGuard::AssignThreadId()
+    void TlsGuard::AssignThreadId()
     {
         // 1부터 순차적으로 할당
         static std::atomic<uint32_t> s_nextId = 1;
@@ -23,5 +23,5 @@ namespace Game::Core
     }
 
     // Id가 할당되지 않은 상태에선 0
-    thread_local uint32_t ThreadLocalGuard::t_threadId = 0;
+    thread_local uint32_t TlsGuard::t_threadId = 0;
 }

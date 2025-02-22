@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Test">
+    <Filter Include="Logic">
       <UniqueIdentifier>{14b000fc-e2f8-4ade-80f7-ed1f25942ea8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Common">
+    <Filter Include="Global">
       <UniqueIdentifier>{ad44a443-7d49-4cf0-a201-c2ae6ac3a672}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CommonPch.cpp">
-      <Filter>Common</Filter>
+    <ClCompile Include="Global.Pch.cpp">
+      <Filter>Global</Filter>
     </ClCompile>
-    <ClCompile Include="Test.cpp">
-      <Filter>Test</Filter>
+    <ClCompile Include="Logic.Test.cpp">
+      <Filter>Logic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CommonPch.h">
-      <Filter>Common</Filter>
+    <ClInclude Include="Global.Pch.h">
+      <Filter>Global</Filter>
     </ClInclude>
-    <ClInclude Include="Test.h">
-      <Filter>Test</Filter>
+    <ClInclude Include="Logic.Test.h">
+      <Filter>Logic</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
