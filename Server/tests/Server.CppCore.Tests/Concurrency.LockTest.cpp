@@ -1,5 +1,5 @@
 ﻿#include "Server.CppCore.Tests/Global.Pch.h"
-#include "Server.CppCore.Tests/Concurrency.LockTests.h"
+#include "Server.CppCore.Tests/Concurrency.LockTest.h"
 
 namespace Server::CppCore::Tests::Concurrency
 {
