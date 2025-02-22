@@ -36,6 +36,11 @@
     <ClInclude Include="Global.Pch.h" />
     <ClInclude Include="Logic.Test.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Server.CppCore\Server.CppCore.vcxproj">
+      <Project>{172ee549-def1-4c50-9f9c-266dbacf5320}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -92,25 +97,21 @@
     <IncludePath>$(SolutionDir)src\;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
     <IntDir>obj\$(Configuration)\</IntDir>
-    <LibraryPath>$(SolutionDir)bin\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(SolutionDir)src\;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
     <IntDir>obj\$(Configuration)\</IntDir>
-    <LibraryPath>$(SolutionDir)bin\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(SolutionDir)src\;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
     <IntDir>obj\$(Configuration)\</IntDir>
-    <LibraryPath>$(SolutionDir)bin\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(SolutionDir)src\;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
     <IntDir>obj\$(Configuration)\</IntDir>
-    <LibraryPath>$(SolutionDir)bin\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -127,9 +128,7 @@
       </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <Lib>
-      <AdditionalDependencies>Server.CppCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
+    <Lib />
     <Lib />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -151,9 +150,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <Lib>
-      <AdditionalDependencies>Server.CppCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
+    <Lib />
     <Lib />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -171,9 +168,7 @@
       </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <Lib>
-      <AdditionalDependencies>Server.CppCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
+    <Lib />
     <Lib />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -195,9 +190,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <Lib>
-      <AdditionalDependencies>Server.CppCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
+    <Lib />
     <Lib />
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
