@@ -3,9 +3,7 @@
 namespace Server::CppCore::Thread
 {
     Manager::~Manager()
-    {
-        Join();
-    }
+    {}
 
     Manager::Manager()
     {}
@@ -19,6 +17,8 @@ namespace Server::CppCore::Thread
     void Manager::Join()
     {
         Manager& instance = GetInstance();
+
+        Concurrency::ExclusiveLockGuard lockGuard(instance._lockHolder);
 
         for (std::thread& thread : instance._threads)
         {

@@ -8,6 +8,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{09faf046-0ed7-40e2-a311-13b324a13cb2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Concurrency.LockTest.cpp">
@@ -16,6 +19,9 @@
     <ClCompile Include="Global.Pch.cpp">
       <Filter>Global</Filter>
     </ClCompile>
+    <ClCompile Include="Thread.ManagerTest.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.Pch.h">
@@ -23,6 +29,9 @@
     </ClInclude>
     <ClInclude Include="Concurrency.LockTest.h">
       <Filter>Concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.ManagerTest.h">
+      <Filter>Thread</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
