@@ -2,32 +2,32 @@
 
 namespace Server::CppCore::Thread
 {
-    Manager::~Manager()
-    {}
-
-    Manager::Manager()
-    {}
-
     Manager& Manager::GetInstance()
     {
         static std::unique_ptr<Manager> pInstance(new Manager());
         return *pInstance;
     }
 
+    Manager::~Manager()
+    {
+        Join();
+    }
+
     void Manager::Join()
     {
         Manager& instance = GetInstance();
 
-        Concurrency::ExclusiveLockGuard lockGuard(instance._lockHolder);
+        std::lock_guard lock(instance._lock);
 
-        for (std::thread& thread : instance._threads)
+        // _threadPairs에 저장된 모든 스레드를 join
+        for (auto& pair : instance._threadPairs)
         {
-            if (thread.joinable())
+            if (pair.second.joinable())
             {
-                thread.join();
+                pair.second.join();
             }
         }
 
-        instance._threads.clear();
+        instance._threadPairs.clear();
     }
 }

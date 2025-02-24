@@ -25,15 +25,11 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Concurrency.LockHolder.cpp" />
-    <ClCompile Include="Concurrency.LockGuard.cpp" />
     <ClCompile Include="Thread.TlsGuard.cpp" />
     <ClCompile Include="Thread.Manager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.Pch.h" />
-    <ClInclude Include="Concurrency.LockHolder.h" />
-    <ClInclude Include="Concurrency.LockGuard.h" />
     <ClInclude Include="Thread.TlsGuard.h" />
     <ClInclude Include="Thread.Manager.h" />
   </ItemGroup>

@@ -4,9 +4,6 @@
     <Filter Include="Thread">
       <UniqueIdentifier>{6229cb51-5721-49eb-8a94-256e78887d31}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Concurrency">
-      <UniqueIdentifier>{a9cc16cf-b859-4cb3-b2bc-da3bce7c75cc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Global">
       <UniqueIdentifier>{44ac4279-cbae-4330-a18d-daa38f9c7134}</UniqueIdentifier>
     </Filter>
@@ -21,12 +18,6 @@
     <ClCompile Include="Thread.Manager.cpp">
       <Filter>Thread</Filter>
     </ClCompile>
-    <ClCompile Include="Concurrency.LockGuard.cpp">
-      <Filter>Concurrency</Filter>
-    </ClCompile>
-    <ClCompile Include="Concurrency.LockHolder.cpp">
-      <Filter>Concurrency</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.Pch.h">
@@ -37,12 +28,6 @@
     </ClInclude>
     <ClInclude Include="Thread.Manager.h">
       <Filter>Thread</Filter>
-    </ClInclude>
-    <ClInclude Include="Concurrency.LockGuard.h">
-      <Filter>Concurrency</Filter>
-    </ClInclude>
-    <ClInclude Include="Concurrency.LockHolder.h">
-      <Filter>Concurrency</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
