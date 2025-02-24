@@ -13,7 +13,7 @@ namespace Server::CppCore::Tests::Thread
 
     private:
         std::vector<std::thread> _threads;
-        CppCore::Concurrency::LockHolder _lockHolder;
+        std::shared_mutex _lock;
         uint32_t _sharedResource = 0;
         const uint32_t _incrementCount = 100'000;
 

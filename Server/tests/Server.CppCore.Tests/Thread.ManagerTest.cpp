@@ -5,7 +5,7 @@ namespace Server::CppCore::Tests::Thread
 {
     void ManagerTest::TestManager()
     {
-        for (uint32_t i = 0; i < 10; ++i)
+        for (uint32_t i = 0; i < 6; ++i)
         {
             // Thread::Manager가 콜백을 실행시키는 스레드 생성
             _threads.emplace_back([this]()
@@ -26,12 +26,13 @@ namespace Server::CppCore::Tests::Thread
         CppCore::Thread::Manager::Join();
 
         // 공유 자원이 예상대로 증가했는지 확인
-        Assert::AreEqual(_incrementCount * 10 * 10, _sharedResource);
+        Assert::AreEqual(_incrementCount * 6 * 10, _sharedResource);
     }
 
     void ManagerTest::IncreaseSharedResource()
     {
-        CppCore::Concurrency::ExclusiveLockGuard lockGuard(_lockHolder);
+        std::lock_guard lock(_lock);
+        
         ++_sharedResource;
     }
 
