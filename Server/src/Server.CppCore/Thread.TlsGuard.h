@@ -9,16 +9,20 @@ namespace Server::CppCore::Thread
     class TlsGuard
     {
     public:
-        TlsGuard();
-        ~TlsGuard();
+        using ThreadId = uint32_t;
 
-        static uint32_t GetThreadId();
+    public:
+        TlsGuard();
+
+        static ThreadId GetThreadId();
+        static std::stack<DeadlockDetector::LockId>& GetLockStack();
 
     private:
         static void AssignThreadId();
 
     private:
-        static thread_local uint32_t t_threadId;
+        static thread_local ThreadId t_threadId;
+        static thread_local std::stack<DeadlockDetector::LockId> t_lockStack;
 
     };
 }

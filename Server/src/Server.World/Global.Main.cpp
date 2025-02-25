@@ -1,14 +1,17 @@
 ﻿#include "Server.World/Global.Pch.h"
-#include "Server.Content/Logic.Test.h"
+#include "Server.Content/Logic.Deadlock.h"
 
 using namespace Server;
 
 int main()
 {
-    for (int32_t i = 0; i < 5; ++i)
-    {
-        CppCore::Thread::Manager::Launch(Content::Logic::Test);
-    }
+    Content::Logic::A a;
+    Content::Logic::B b;
+    Content::Logic::C c;
+
+    Content::Logic::RunDeadlockThreads(a, b, c);
+
+    CppCore::Thread::Manager::Join();
 
 	return 0;
 }

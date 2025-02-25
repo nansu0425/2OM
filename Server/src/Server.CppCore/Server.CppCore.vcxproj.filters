@@ -18,16 +18,31 @@
     <ClCompile Include="Thread.Manager.cpp">
       <Filter>Thread</Filter>
     </ClCompile>
+    <ClCompile Include="Thread.DeadlockDetector.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread.LockGuard.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Global.Pch.h">
-      <Filter>Global</Filter>
-    </ClInclude>
     <ClInclude Include="Thread.TlsGuard.h">
       <Filter>Thread</Filter>
     </ClInclude>
     <ClInclude Include="Thread.Manager.h">
       <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.DeadlockDetector.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.LockGuard.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.Pch.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.Macro.h">
+      <Filter>Global</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

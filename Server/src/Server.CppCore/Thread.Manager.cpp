@@ -8,26 +8,21 @@ namespace Server::CppCore::Thread
         return *pInstance;
     }
 
-    Manager::~Manager()
-    {
-        Join();
-    }
-
     void Manager::Join()
     {
         Manager& instance = GetInstance();
 
-        std::lock_guard lock(instance._lock);
+        SERVER_CPPCORE_LOCK_GUARD_TARGET(instance);
 
-        // _threadPairs에 저장된 모든 스레드를 join
-        for (auto& pair : instance._threadPairs)
+        // 모든 스레드를 join
+        for (auto& idToThread : instance._idToThreadPairs)
         {
-            if (pair.second.joinable())
+            if (idToThread.second.joinable())
             {
-                pair.second.join();
+                idToThread.second.join();
             }
         }
 
-        instance._threadPairs.clear();
+        instance._idToThreadPairs.clear();
     }
 }

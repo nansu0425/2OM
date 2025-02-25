@@ -15,12 +15,18 @@
     <ClCompile Include="Logic.Test.cpp">
       <Filter>Logic</Filter>
     </ClCompile>
+    <ClCompile Include="Logic.Deadlock.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.Pch.h">
       <Filter>Global</Filter>
     </ClInclude>
     <ClInclude Include="Logic.Test.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic.Deadlock.h">
       <Filter>Logic</Filter>
     </ClInclude>
   </ItemGroup>

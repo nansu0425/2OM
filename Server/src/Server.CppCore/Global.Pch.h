@@ -36,5 +36,8 @@
  *    Server.CppCore    *
  *----------------------*/
 
+#include "Server.CppCore/Thread.DeadlockDetector.h"
+#include "Server.CppCore/Thread.LockGuard.h"
+#include "Server.CppCore/Global.Macro.h"
 #include "Server.CppCore/Thread.TlsGuard.h"
 #include "Server.CppCore/Thread.Manager.h"

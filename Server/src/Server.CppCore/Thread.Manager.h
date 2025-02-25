@@ -9,7 +9,6 @@ namespace Server::CppCore::Thread
     class Manager
     {
     public:
-        ~Manager();
         Manager(const Manager&) = delete;
         Manager& operator=(const Manager&) = delete;
 
@@ -23,9 +22,10 @@ namespace Server::CppCore::Thread
         static Manager& GetInstance();
 
     private:
+        SERVER_CPPCORE_LOCK;
+        Lock _lock;
         TlsGuard _tlsGuard;
-        std::shared_mutex _lock;
-        std::unordered_map<uint32_t, std::thread> _threadPairs;
+        std::unordered_map<TlsGuard::ThreadId, std::thread> _idToThreadPairs;
 
     };
 
@@ -35,7 +35,7 @@ namespace Server::CppCore::Thread
         Manager& instance = GetInstance();
 
         // threadId를 promise로 전달 후 future로 받음
-        std::promise<uint32_t> threadIdPromise;
+        std::promise<TlsGuard::ThreadId> threadIdPromise;
         std::future threadIdFuture = threadIdPromise.get_future();
 
         // function을 호출하는 스레드 생성
@@ -47,9 +47,9 @@ namespace Server::CppCore::Thread
                                              function();
                                          });
 
-        std::lock_guard lock(instance._lock);
+        SERVER_CPPCORE_LOCK_GUARD_TARGET(instance);
 
         // threadId를 키로 스레드를 저장
-        instance._threadPairs.emplace(threadIdFuture.get(), std::move(thread));
+        instance._idToThreadPairs.emplace(threadIdFuture.get(), std::move(thread));
     }
 }
